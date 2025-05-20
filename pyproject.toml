@@ -1,0 +1,28 @@
+[project]
+name = "nyx"
+version = "0.1.0"
+description = "Minimalist workout tracker with built-in rest timer"
+authors = [{ name = "lifeforce-dev" , email = "lifeforce-dev@gmail.com" }]
+requires-python = ">=3.12"
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlmodel",
+    "pydantic",
+    "python-dotenv",      # for env config if needed
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
