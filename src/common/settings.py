@@ -1,8 +1,7 @@
-from pydantic import BaseSettings
+from pydantic import BaseModel
 
-class AppSettings(BaseSettings):
+class AppSettings(BaseModel):
     base_url: str = "http://localhost:8000"
     port: int = 8000
-    log_level: str = "debug"
 
 APP_SETTINGS = AppSettings()

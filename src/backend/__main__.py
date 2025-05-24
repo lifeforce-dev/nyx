@@ -1,3 +1,3 @@
 from .main import start
 
-start(reload=True)
+start(reload=False)
